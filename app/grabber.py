@@ -10,7 +10,6 @@ celery = make_celery(app)
 
 @app.route('/')
 def hello_world():
-    # task = task_hello_world.delay()
     return "hello_world"
 
 
