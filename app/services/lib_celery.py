@@ -5,7 +5,7 @@ def make_celery(app):
     celery = Celery(
         'tasks',
         backend='amqp://tw-site-grabber-6924.hostman.site',
-        broker='amqp://tw-site-grabber-6924.hostman.site',
+        broker='amqp://tw-site-grabber-6924.hostman.site'
     )
     celery.conf.update(app.config)
 
