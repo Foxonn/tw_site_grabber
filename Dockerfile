@@ -4,7 +4,7 @@ RUN pip install pipenv
 
 RUN mkdir -p /usr/src/app
 
-COPY Pipfile Pipfile.lock /usr/src/
+COPY ${pwd}Pipfile ${pwd}Pipfile.lock /usr/src/
 
 WORKDIR /usr/src/
 
