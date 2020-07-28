@@ -9,6 +9,7 @@ verify_ssl = true
 flask = "*"
 pywebcopy = "*"
 requests = "*"
+celery = "*"
 
 [requires]
 python_version = "3.8"
