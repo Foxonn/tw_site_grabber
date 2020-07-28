@@ -1,4 +1,5 @@
 from flask import Flask, request, jsonify, Response
+from werkzeug.contrib.fixers import ProxyFix
 from services.lib_services import test_hello_world, parse_site
 from services.lib_celery import make_celery
 from celery.result import AsyncResult
@@ -63,6 +64,7 @@ def task_parse_site(site_url):
 def task_hello_world():
     return test_hello_world()
 
+app.wsgi_app = ProxyFix(app.wsgi_app)
 
 if __name__ == '__main__':
     app.run(host='0.0.0.0')
