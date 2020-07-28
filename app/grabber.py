@@ -61,4 +61,3 @@ def task_parse_site(site_url):
 @celery.task(soft_time_limit=60 * 10, time_limit=60 * 15)
 def task_hello_world():
     return test_hello_world()
-
