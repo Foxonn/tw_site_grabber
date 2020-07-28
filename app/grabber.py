@@ -9,10 +9,10 @@ app = Flask(__name__)
 celery = make_celery(app)
 
 
-# @app.route('/')
-# def hello_world():
-#     task = task_hello_world.delay()
-#     return jsonify({"id": task.id})
+@app.route('/')
+def hello_world():
+    # task = task_hello_world.delay()
+    return "hello_world"
 
 
 @app.route('/get_archive/<id_task>')
