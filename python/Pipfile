@@ -7,10 +7,6 @@ verify_ssl = true
 
 [packages]
 flask = "*"
-celery = "*"
-requests = "*"
-pytest = "*"
-pywebcopy = "*"
 
 [requires]
 python_version = "3.8"

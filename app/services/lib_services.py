@@ -1,4 +1,4 @@
-from parser.lib_parser import run
+from app.parser.lib_parser import run
 import json
 import re
 import time

@@ -1,6 +1,6 @@
 from flask import Flask, request, jsonify, Response
-from services.lib_services import test_hello_world, parse_site
-from services.lib_celery import make_celery
+from app.services.lib_services import test_hello_world, parse_site
+from app.services.lib_celery import make_celery
 from celery.result import AsyncResult
 import os
 
@@ -62,6 +62,7 @@ def task_parse_site(site_url):
 @celery.task(soft_time_limit=60 * 10, time_limit=60 * 15)
 def task_hello_world():
     return test_hello_world()
+
 
 if __name__ == '__main__':
     app.run(host='0.0.0.0')
