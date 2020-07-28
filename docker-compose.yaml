@@ -2,21 +2,13 @@ version: '3'
 
 services:
   app:
-    build: .
+    build: python/.
     env_file: .env
     ports:
       - '5000:5000'
     volumes:
       - ./app/:/usr/src/app/
-    command: flask run --host=0.0.0.0
     depends_on:
       - rabbitmq
   rabbitmq:
-    image: rabbitmq
-    ports:
-      - '5672:5672'
-    volumes:
-      - parser_rabbitmq:/var/lib/rabbitmq
-
-volumes:
-  parser_rabbitmq:
+    build: rabbitmq/.
