@@ -1,3 +1,3 @@
 FROM rabbitmq
-EXPOSE 5672 5672
+EXPOSE 5672
 VOLUME /var/lib/rabbitmq
