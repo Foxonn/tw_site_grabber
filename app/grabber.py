@@ -5,7 +5,6 @@ from celery.result import AsyncResult
 import os
 
 app = Flask(__name__)
-
 celery = make_celery(app)
 
 
@@ -63,6 +62,3 @@ def task_parse_site(site_url):
 def task_hello_world():
     return test_hello_world()
 
-
-if __name__ == '__main__':
-    app.run(host='0.0.0.0')
