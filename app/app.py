@@ -44,7 +44,7 @@ def get_status_task(id_task):
         ziplink = result.get()
         return jsonify({'link': '/get_archive/' + id_task})
 
-    return jsonify({'state': result.state})
+    return jsonify({'state': 'IN WORKED'})
 
 
 @app.route('/run_parse_site', methods=['POST'])

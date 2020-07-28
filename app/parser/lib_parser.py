@@ -1,5 +1,4 @@
 from pywebcopy import save_website
-import zipfile
 import os
 import shutil
 import re
