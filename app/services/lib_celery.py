@@ -4,8 +4,8 @@ from celery import Celery
 def make_celery(app):
     celery = Celery(
         'tasks',
-        backend='tw-site-grabber-6924.hostman.site',
-        broker='tw-site-grabber-6924.hostman.site'
+        backend='pyamqp://tw-site-grabber-6924.hostman.site:80',
+        broker='pyamqp://tw-site-grabber-6924.hostman.site:80',
     )
     celery.conf.update(app.config)
 
