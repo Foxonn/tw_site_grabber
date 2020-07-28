@@ -1,3 +1,3 @@
 FROM rabbitmq
-EXPOSE 5672
+EXPOSE 8080/tcp
 VOLUME /var/lib/rabbitmq
