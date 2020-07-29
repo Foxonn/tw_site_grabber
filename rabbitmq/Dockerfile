@@ -1,2 +1,2 @@
 FROM rabbitmq
-EXPOSE 5672/tcp
+EXPOSE 5672

@@ -2,18 +2,16 @@ FROM python:3.8
 
 EXPOSE 5000
 
-VOLUME ../app/:/usr/src/app/
+RUN python -m pip install --upgrade pip
 
 RUN pip install pipenv
 
 RUN mkdir -p /usr/src/app
 
+COPY Pipfile Pipfile.lock /usr/src/
+
 WORKDIR /usr/src/
 
-COPY Pipfile Pipfile.lock /
-
 RUN pipenv install --deploy --system --ignore-pipfile
-
-WORKDIR /usr/src/app
 
 CMD flask run --host=0.0.0.0

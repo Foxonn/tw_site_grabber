@@ -26,7 +26,6 @@ def test_run_parse_site_invalid(url):
 
 def test_run_parse_site_not_allowed_get():
     response = requests.get(HOST + "run_parse_site")
-
     assert not response.ok
 
 
